@@ -14,7 +14,7 @@ BuildRequires:	XFree86-devel
 BuildRequires:	motif-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_libdir		%{_prefix}/lib/X11
+%define _libdir	/usr/lib/X11
 
 %description
 Xmcd is a full-featured CD Player utility package including xmcd, a CD
@@ -33,7 +33,7 @@ Twój napêd CD-ROM, CD-R b±d¼ CD-RW w stereofoniczny odtwarzacz p³yt
 kompaktowych.
 
 %prep
-%setup -q -n %{name}-3.0
+%setup -q
 %patch0 -p1
 %patch1 -p1
 
@@ -65,6 +65,7 @@ cp -f libdi_d/config.sh $RPM_BUILD_ROOT%{_libdir}/xmcd/config/config.sh
 cp -f misc_d/discog.htm $RPM_BUILD_ROOT%{_libdir}/xmcd/discog/discog.html
 cp -f misc_d/genidx.sh $RPM_BUILD_ROOT%{_libdir}/xmcd/scripts/genidx
 cp -f xmcd_d/XMcd.ad $RPM_BUILD_ROOT%{_libdir}/app-defaults/XMcd
+cp -f xmcd_d/XKeysymDB $RPM_BUILD_ROOT%{_libdir}/app-defaults
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -76,11 +77,12 @@ echo "Before first use run %{_libdir}/xmcd/config/config.sh to configure"
 %defattr(644,root,root,755)
 %doc docs_d/*
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/.xmcd*
 %dir %{_libdir}/xmcd
-%dir %{_libdir}/bin*
+%dir %{_libdir}/xmcd/bin*
 %attr(755,root,root) %{_libdir}/xmcd/bin*/[!R]*
 %{_libdir}/xmcd/bin*/README
 %{_libdir}/xmcd/[chps]*
 %{_libdir}/xmcd/discog
-%{_libdir}/app-defaults/XMcd
+%{_libdir}/app-defaults/*
 %{_mandir}/man1/*
