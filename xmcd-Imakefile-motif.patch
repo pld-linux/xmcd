@@ -1,0 +1,54 @@
+--- xmcd-3.0/util_d/Imakefile	Wed Aug  8 02:15:14 2001
++++ xmcd-3.0.new/util_d/Imakefile	Thu Mar 28 15:30:42 2002
+@@ -34,17 +34,17 @@
+  * LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(XLIB)
+  *
+  * or,
+- *
+- * LOCAL_LIBRARIES= -lXm -lXt -lX11
+- *
++ */
++LOCAL_LIBRARIES= -lXm -lXt -lX11
++/*
+  */
+ 
+ /*
+  * #include "Motif.tmpl"
+  * #include "Motif.rules"
+- */
+-LOCAL_LIBRARIES= XmClientLibs
+-
++ *
++ * LOCAL_LIBRARIES= XmClientLibs
++*/
+ 
+ /**** Optional defines:  Change as you see fit. *****************************
+  *
+--- xmcd-3.0/xmcd_d/Imakefile	Wed Aug  8 02:15:03 2001
++++ xmcd-3.0.new/xmcd_d/Imakefile	Thu Mar 28 15:31:41 2002
+@@ -34,9 +34,9 @@
+  * LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(XLIB)
+  *
+  * or,
+- *
+- * LOCAL_LIBRARIES= -lXm -lXt -lX11
+- *
++ */
++LOCAL_LIBRARIES= -lXm -lXt -lX11
++/*
+  */
+ 
+ /*
+@@ -53,9 +53,9 @@
+ #else
+ SYS_LIBRARIES= $(LIBCDDB)
+ #endif
+-
+-LOCAL_LIBRARIES= XmClientLibs
+-
++/*
++ * LOCAL_LIBRARIES= XmClientLibs
++*/
+ #if defined(FreeBSDArchitecture)
+ .if exists(/usr/include/camlib.h)
+ LOCAL_LIBRARIES+= -lcam
