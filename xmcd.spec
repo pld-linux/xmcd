@@ -67,8 +67,6 @@ cp -f misc_d/discog.htm $RPM_BUILD_ROOT%{_libdir}/xmcd/discog/discog.html
 cp -f misc_d/genidx.sh $RPM_BUILD_ROOT%{_libdir}/xmcd/scripts/genidx
 cp -f xmcd_d/XMcd.ad $RPM_BUILD_ROOT%{_libdir}/app-defaults/XMcd
 
-gzip -9nf docs_d/*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
