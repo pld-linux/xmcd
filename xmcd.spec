@@ -14,7 +14,7 @@ BuildRequires:	XFree86-devel
 BuildRequires:	motif-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_libdir		%{_prefix}/lib/X11
+%define		_libdir		/usr/X11R6/lib/X11
 
 %description
 Xmcd is a full-featured CD Player utility package including xmcd, a CD
@@ -77,7 +77,7 @@ echo "Before first use run %{_libdir}/xmcd/config/config.sh to configure"
 %doc docs_d/*
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/xmcd
-%dir %{_libdir}/bin*
+%dir %{_libdir}/xmcd/bin*
 %attr(755,root,root) %{_libdir}/xmcd/bin*/[!R]*
 %{_libdir}/xmcd/bin*/README
 %{_libdir}/xmcd/[chps]*
