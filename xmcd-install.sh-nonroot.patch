@@ -1,0 +1,32 @@
+--- xmcd-3.0/install.sh	Wed Aug  8 02:14:54 2001
++++ xmcd-3.0.new/install.sh	Thu Mar 28 17:22:59 2002
+@@ -686,29 +686,6 @@
+ $ECHO "CDDB(tm) Disc Recognition Service.  See the CDDB file"
+ $ECHO "for information."
+ 
+-# Check privilege
+-(id | fgrep 'uid=0(root)') >/dev/null 2>&1
+-if [ $? != 0 ]
+-then
+-	$ECHO "\n\nYou should be the super user to install xmcd."
+-
+-	YNDEF=n
+-	if [ -z "$BATCH" ] && get_yn "\n  Proceed with installation anyway"
+-	then
+-		$ECHO "\nWARNING: Without super-user privilege, some files may"
+-		$ECHO "not be properly installed, or they may be installed"
+-		$ECHO "with incorrect permissions."
+-
+-		XBINPERM=711
+-		XBINOWNER=_default_
+-		OWNER=_default_
+-		GROUP=_default_
+-	else
+-		log_err -p "Not super user: installation aborted by user."
+-		do_exit 1
+-	fi
+-fi
+-
+ 
+ # Check existence of binaries
+ 
