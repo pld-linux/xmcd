@@ -30,13 +30,14 @@ Xmcd to pakiet do odtwarzania p³yt CD o du¿ych mo¿liwo¶ciach
 zawieraj±cy xmcd - program dla X11 i cda - program dzia³aj±cy w trybie
 tekstowym. Cda mo¿e dzia³aæ w trybie pe³noekranowym jak i byæ
 sterowany z linii poleceñ. Obydwa te programy pozwalaj± przekszta³ciæ
-Twój napêd CD-ROM, CD-R b±d¼ CD-RW w stereofoniczny odtawarzacz p³yt
+Twój napêd CD-ROM, CD-R b±d¼ CD-RW w stereofoniczny odtwarzacz p³yt
 kompaktowych.
 
 %prep
 %setup -q -n %{name}-3.0
 %patch0 -p1
 %patch1 -p1
+
 %build
 xmkmf
 %{__make} Makefiles
@@ -77,11 +78,12 @@ echo "Before first use run %{_libdir}/xmcd/config/config.sh to configure"
 %files
 %defattr(644,root,root,755)
 %doc docs_d/*
-%dir %{_libdir}/xmcd
 %attr(755,root,root) %{_bindir}/*
+%dir %{_libdir}/xmcd
+%dir %{_libdir}/bin*
 %attr(755,root,root) %{_libdir}/xmcd/bin*/[!R]*
 %{_libdir}/xmcd/bin*/README
-%{_libdir}/xmcd/[chps]*/*
-%{_libdir}/xmcd/discog/*
+%{_libdir}/xmcd/[chps]*
+%{_libdir}/xmcd/discog
 %{_libdir}/app-defaults/XMcd
 %{_mandir}/man1/*
