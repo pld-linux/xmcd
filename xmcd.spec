@@ -1,13 +1,12 @@
 Summary:	Motif (tm) CD Audio Player
 Summary(pl):	Odtwarzacz CD
 Name:		xmcd
-Version:	3.0.2
+Version:	3.2.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-#Source0:	http://www.ibiblio.org/tkan/download/xmcd/%{version}/src/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	3a4bfe86ca44486adddfb7b0e1a41388
+Source0:	http://www.ibiblio.org/tkan/download/xmcd/%{version}/src/%{name}-%{version}.tar.gz
+# Source0-md5:	3bed299c7e3e81f0f6ff40bfe45f72e6
 URL:		http://www.ibiblio.org/tkan/xmcd/main.html
 Patch0:		%{name}-Imakefile-motif.patch
 Patch1:		%{name}-install.sh-nonroot.patch
