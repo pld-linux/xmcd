@@ -5,8 +5,10 @@ Version:	3.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-URL:		http://www.amb.org/xmcd/
-Source0:	http://www.ibiblio.org/tkan/download/xmcd/src/%{name}-%{version}.tar.gz
+#Source0:	http://www.ibiblio.org/tkan/download/xmcd/%{version}/src/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	3a4bfe86ca44486adddfb7b0e1a41388
+URL:		http://www.ibiblio.org/tkan/xmcd/main.html
 Patch0:		%{name}-Imakefile-motif.patch
 Patch1:		%{name}-install.sh-nonroot.patch
 BuildRequires:	XFree86-devel
