@@ -4,7 +4,7 @@ Name:		xmcd
 Version:	3.0.2
 Release:	1
 License:	GPL
-Group:		X11/Applications/Multimedia
+Group:		X11/Applications/Sound
 URL:		http://www.amb.org/xmcd/
 Source0:	http://www.ibiblio.org/tkan/download/xmcd/src/%{name}-%{version}.tar.gz
 Patch0:		%{name}-Imakefile-motif.patch
