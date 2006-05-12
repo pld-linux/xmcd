@@ -1,14 +1,14 @@
 --- xmcd-3.0/util_d/Imakefile	Wed Aug  8 02:15:14 2001
 +++ xmcd-3.0.new/util_d/Imakefile	Thu Mar 28 15:30:42 2002
 @@ -34,17 +34,17 @@
-  * LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(XLIB)
+  * LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(EXTENSIONLIB) $(XLIB)
   *
   * or,
 - *
-- * LOCAL_LIBRARIES= -lXm -lXt -lX11
+- * LOCAL_LIBRARIES= -lXm -lXt -lXext -lX11
 - *
 + */
-+LOCAL_LIBRARIES= -lXm -lXt -lX11
++LOCAL_LIBRARIES= -lXm -lXt -lXext -lX11
 +/*
   */
  
@@ -27,22 +27,22 @@
 --- xmcd-3.0/xmcd_d/Imakefile	Wed Aug  8 02:15:03 2001
 +++ xmcd-3.0.new/xmcd_d/Imakefile	Thu Mar 28 15:31:41 2002
 @@ -34,9 +34,9 @@
-  * LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(XLIB)
+  * LOCAL_LIBRARIES= $(XMLIB) $(XTOOLLIB) $(EXTENSIONLIB) $(XLIB)
   *
   * or,
 - *
-- * LOCAL_LIBRARIES= -lXm -lXt -lX11
+- * LOCAL_LIBRARIES= -lXm -lXt -lXext -lX11
 - *
 + */
-+LOCAL_LIBRARIES= -lXm -lXt -lX11
++LOCAL_LIBRARIES= -lXm -lXt -lXext -lX11
 +/*
   */
  
  /*
 @@ -53,9 +53,9 @@
- #else
- SYS_LIBRARIES= $(LIBCDDB)
- #endif
+ #endif	/* AIX */
+ #endif	/* OSF1 */
+ #endif	/* Linux */
 -
 -LOCAL_LIBRARIES= XmClientLibs
 -
