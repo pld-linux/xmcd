@@ -15,6 +15,7 @@ Patch1:		%{name}-install.sh-nonroot.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	flac-devel
 BuildRequires:	motif-devel
+BuildRequires:	ncurses-devel
 BuildRequires:	sed >= 4.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
