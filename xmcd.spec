@@ -1,7 +1,7 @@
 # TODO:
 #  - make xmcd work (cda is ok)
 Summary:	Motif (tm) CD Audio Player
-Summary(pl.UTF-8):   Odtwarzacz CD
+Summary(pl.UTF-8):	Odtwarzacz CD
 Name:		xmcd
 Version:	3.3.2
 Release:	1
