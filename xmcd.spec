@@ -1,7 +1,7 @@
 # TODO:
 #  - make xmcd work (cda is ok)
 Summary:	Motif (tm) CD Audio Player
-Summary(pl):	Odtwarzacz CD
+Summary(pl.UTF-8):   Odtwarzacz CD
 Name:		xmcd
 Version:	3.3.2
 Release:	1
@@ -29,12 +29,12 @@ also features a curses-based, screen-oriented mode. Both utilities
 transform your CD-ROM, CD-R or CD-RW drive into a stereo CD player,
 allowing you to play audio CDs on your computer.
 
-%description -l pl
-Xmcd to pakiet do odtwarzania p³yt CD o du¿ych mo¿liwo¶ciach
-zawieraj±cy xmcd - program dla X11 i cda - program dzia³aj±cy w trybie
-tekstowym. Cda mo¿e dzia³aæ w trybie pe³noekranowym jak i byæ
-sterowany z linii poleceñ. Obydwa te programy pozwalaj± przekszta³ciæ
-Twój napêd CD-ROM, CD-R b±d¼ CD-RW w stereofoniczny odtwarzacz p³yt
+%description -l pl.UTF-8
+Xmcd to pakiet do odtwarzania pÅ‚yt CD o duÅ¼ych moÅ¼liwoÅ›ciach
+zawierajÄ…cy xmcd - program dla X11 i cda - program dziaÅ‚ajÄ…cy w trybie
+tekstowym. Cda moÅ¼e dziaÅ‚aÄ‡ w trybie peÅ‚noekranowym jak i byÄ‡
+sterowany z linii poleceÅ„. Obydwa te programy pozwalajÄ… przeksztaÅ‚ciÄ‡
+TwÃ³j napÄ™d CD-ROM, CD-R bÄ…dÅº CD-RW w stereofoniczny odtwarzacz pÅ‚yt
 kompaktowych.
 
 %prep
